@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAASHI Cafe | Ongwediva, Namibia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d2d2d;
+            background-color: #fafafa;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            padding: 2rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #2d5f3f;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2d2d2d;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #2d5f3f;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2d5f3f 0%, #4a8c62 100%);
+            color: white;
+            padding: 8rem 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .location {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Section Styles */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 5%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #2d5f3f;
+        }
+
+        /* Menu Section */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .menu-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .menu-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-category h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #2d5f3f;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2d5f3f;
+            padding-bottom: 0.5rem;
+        }
+
+        .menu-category ul {
+            list-style: none;
+        }
+
+        .menu-category li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .menu-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-item h3 {
+            color: #2d5f3f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+        .contact-item p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d5f3f;
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">KAASHI</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>KAASHI Cafe</h1>
+        <p>Coffee, Shakes & Pastries</p>
+        <p class="location">Maeurala Mall, Ongwediva, Namibia</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Coffees</h3>
+                <ul>
+                    <li>Espresso</li>
+                    <li>Americano</li>
+                    <li>Cappuccino</li>
+                    <li>Latte</li>
+                    <li>Flat White</li>
+                    <li>Mocha</li>
+                    <li>Iced Coffee</li>
+                </ul>
+            </div>
+
+            <div class="menu-category">
+                <h3>Shakes</h3>
+                <ul>
+                    <li>Vanilla Milkshake</li>
+                    <li>Chocolate Milkshake</li>
+                    <li>Strawberry Milkshake</li>
+                    <li>Banana Shake</li>
+                    <li>Oreo Shake</li>
+                    <li>Peanut Butter Shake</li>
+                    <li>Caramel Shake</li>
+                </ul>
+            </div>
+
+            <div class="menu-category">
+                <h3>Pastries</h3>
+                <ul>
+                    <li>Croissants</li>
+                    <li>Danish Pastries</li>
+                    <li>Muffins</li>
+                    <li>Scones</li>
+                    <li>Cinnamon Rolls</li>
+                    <li>Brownies</li>
+                    <li>Cookies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about">
+            <p>
+                KAASHI Cafe is a minimalist haven in the heart of Ongwediva, located at Maeurala Mall. 
+                We believe in simplicity and quality, serving carefully crafted coffees, refreshing shakes, 
+                and freshly baked pastries in a calm, welcoming atmosphere. Whether you're starting your day 
+                or taking a break, we're here to provide you with a moment of peace and exceptional taste.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Visit Us</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>Maeurala Mall<br>Ongwediva<br>Namibia</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 7am - 6pm<br>Saturday: 8am - 5pm<br>Sunday: 9am - 4pm</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Contact</h3>
+                <p>Phone: +264 XX XXX XXXX<br>Email: info@kaashicafe.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 KAASHI Cafe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
